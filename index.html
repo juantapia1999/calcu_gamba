@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="margin: auto;">
+        <br>
+        <form>
+            <div class="row">
+                <h1 class="">Calculadora de caja</h1>
+            </div>
+            <br>
+            <div class="row">
+                <div class="card col-6" style="border: 1px grey solid; box-shadow: 10px 10px 5px #81929b;">
+                    <div class="form-group">
+                        <h1 id="palabra">Movimientos de caja</h1>
+                    </div>
+                    <div class="form-group">
+                        <label for="caja">Monto inicial de caja</label>
+                        <input type="number" id="caja" class="form-control" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="remesas_enviadas">Remesas enviadas</label>
+                        <input type="number" id="remesas_enviadas" class="form-control" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="pago_remesas">Pago de remesas</label>
+                        <input type="number" id="pago_remesas" class="form-control" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="recargas">Recargas</label>
+                        <input type="number" id="recargas" class="form-control" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="compra_divisas">Compra de divisas</label>
+                        <input type="number" id="compra_divisas" class="form-control" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="venta_divisas">Venta de divisas</label>
+                        <input type="number" id="venta_divisas" class="form-control" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="otros_gastos">Otros gastos</label>
+                        <input type="number" id="otros_gastos" class="form-control" value="0">
+                    </div>
+                    <div class="form-goup">
+                        <hr>
+                        <label for="total_sistema">Total segun sistema</label>
+                        <input type="number" id="total_sistema" readonly class="form-control" value="0">
+                    </div>
+                    <br>
+                </div>
+                <div class="card col-6" style="border: 1px grey solid; box-shadow: 10px 10px 5px #81929b;">
+                    <div class="form-group">
+                        <h1>Conteo de efectivo</h1>
+                    </div>
+                    <div class="form-group row">
+                        <label for="veinte_mil" class="col-form-label col-3">20000</label>
+                        <input type="number" id="veinte_mil" class="form-control col-6" value="0" step="1">
+                    </div>
+                    <div class="form-group row">
+                        <label for="diez_mil" class="col-form-label col-3">10000</label>
+                        <input type="number" id="diez_mil" class="form-control col-6" value="0" step="1">
+                    </div>
+                    <div class="form-group row">
+                        <label for="cinco_mil" class="col-form-label col-3">5000</label>
+                        <input type="number" id="cinco_mil" class="form-control col-6" value="0" step="1">
+                    </div>
+                    <div class="form-group row">
+                        <label for="dos_mil" class="col-form-label col-3">2000</label>
+                        <input type="number" id="dos_mil" class="form-control col-6" value="0" step="1">
+                    </div>
+                    <div class="form-group row">
+                        <label for="mil" class="col-form-label col-3">1000</label>
+                        <input type="number" id="mil" class="form-control col-6" value="0" step="1">
+                    </div>
+                    <div class="form-group row">
+                        <label for="quinientos" class="col-form-label col-3">500</label>
+                        <input type="number" id="quinientos" class="form-control col-6" value="0" step="1">
+                    </div>
+                    <div class="form-group row">
+                        <label for="cien" class="col-form-label col-3">100</label>
+                        <input type="number" id="cien" class="form-control col-6" value="0" step="1">
+                    </div>
+                    <div class="form-group row">
+                        <label for="cincuenta"class="col-form-label col-3">50</label>
+                        <input type="number" id="cincuenta" class="form-control col-6" value="0" step="1">
+                    </div>
+                    <div class="form-group row">
+                        <label for="diez"class="col-form-label col-3">10</label>
+                        <input type="number" id="diez" class="form-control col-6" value="0" step="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="total_efectivo">Total efectivo</label>
+                        <input type="number" class="form-control" id="total_efectivo" value="0" readonly>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="card col-12" style="border: 1px grey solid; box-shadow: 10px 10px 5px #81929b;">
+                <br>
+                <button type="button" class="btn btn-success" onclick="submit()">Calcular</button>
+                <br>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
