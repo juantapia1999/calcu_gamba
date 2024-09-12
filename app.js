@@ -23,7 +23,7 @@ function submit() {
 
     document.getElementById("total_efectivo").value = total;
 
-    let diferencia = Number(document.getElementById("total_sistema").value)-Number(document.getElementById("total_efectivo").value)
+    let diferencia = Number(document.getElementById("total_efectivo").value)-Number(document.getElementById("total_sistema").value)
 
     alert("la diferencia es de "+diferencia)
 }
