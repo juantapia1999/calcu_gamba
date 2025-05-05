@@ -1,0 +1,89 @@
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <p>Movimientos de Caja: ${{saldoMovimiento}}</p>
+        <form [formGroup]="formMovimiento">
+            <div class="form-group">
+                <label for="apertura">Apertura</label>
+                <input type="number" id="apertura" formControlName="apertura" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="remesasEnviadas">Remesas Enviadas</label>
+                <input type="number" id="remesasEnviadas" formControlName="remesasEnviadas" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="recargas">Recargas</label>
+                <input type="number" id="recargas" formControlName="recargas" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="ventaDivisas">Venta de Divisas</label>
+                <input type="number" id="ventaDivisas" formControlName="ventaDivisas" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="compraDivisas">Compra de Divisas</label>
+                <input type="number" id="compraDivisas" formControlName="compraDivisas" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="pagoRemesas">Pago de Remesas</label>
+                <input type="number" id="pagoRemesas" formControlName="pagoRemesas" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="transferenciasBancarias">Transferencias Bancarias</label>
+                <input type="number" id="transferenciasBancarias" formControlName="transferenciasBancarias"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="salidaABovedaYCajas">Salida a Boveda y otras Cajas</label>
+                <input type="number" id="salidaABovedaYCajas" formControlName="salidaABovedaYCajas"
+                    class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="gastos">Gastos Varios</label>
+                <input type="number" id="gastos" formControlName="gastos" class="form-control">
+            </div>
+        </form>
+    </div>
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <p>Conteo de Efectivo: ${{saldoDivisa}}</p>
+        <form [formGroup]="formSaldoDivisa">
+            <div class="form-group">
+                <label for="veinteMil">20.000</label>
+                <input type="number" id="veinteMil" formControlName="veinteMil" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="diezMil">10.000</label>
+                <input type="number" id="diezMil" formControlName="diezMil" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="cincoMil">5.000</label>
+                <input type="number" id="cincoMil" formControlName="cincoMil" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="dosMil">2.000</label>
+                <input type="number" id="dosMil" formControlName="dosMil" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="mil">1.000</label>
+                <input type="number" id="mil" formControlName="mil" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="quinientos">500</label>
+                <input type="number" id="quinientos" formControlName="quinientos" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="cien">100</label>
+                <input type="number" id="cien" formControlName="cien" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="cincuenta">50</label>
+                <input type="number" id="cincuenta" formControlName="cincuenta" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="diez">10</label>
+                <input type="number" id="diez" formControlName="diez" class="form-control">
+            </div>
+        </form>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-success btn-block" (click)="onSubmit()">Calcular Saldo</button>
+    </div>
+</div>
