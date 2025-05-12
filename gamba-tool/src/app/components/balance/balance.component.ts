@@ -42,6 +42,10 @@ export class BalanceComponent implements OnInit {
   }
 
   onSubmit(): void {
+
+    saldoMovimiento: number = 0;
+    saldoDivisa: number = 0;
+    
     let cortes: any = [20000, 10000, 5000, 2000, 1000, 500, 100, 50, 10];
 
     this.saldoMovimiento = this.formMovimiento.get('apertura')?.value + this.formMovimiento.get('recargas')?.value + this.formMovimiento.get('remesasEnviadas')?.value + this.formMovimiento.get('ventaDivisas')?.value - this.formMovimiento.get('compraDivisas')?.value - this.formMovimiento.get('pagoRemesas')?.value - this.formMovimiento.get('transferenciasBancarias')?.value - this.formMovimiento.get('salidaABovedaYCajas')?.value - this.formMovimiento.get('gastos')?.value;
