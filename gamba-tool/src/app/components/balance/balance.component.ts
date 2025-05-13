@@ -43,8 +43,8 @@ export class BalanceComponent implements OnInit {
 
   onSubmit(): void {
 
-    saldoMovimiento: number = 0;
-    saldoDivisa: number = 0;
+    this.saldoMovimiento = 0;
+    this.saldoDivisa = 0;
     
     let cortes: any = [20000, 10000, 5000, 2000, 1000, 500, 100, 50, 10];
 
