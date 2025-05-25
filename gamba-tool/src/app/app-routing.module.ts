@@ -4,12 +4,14 @@ import { BalanceComponent } from './components/balance/balance.component';
 import { CalculoHorasComponent } from './components/calculo-horas/calculo-horas.component';
 import { CortesComponent } from './components/cortes/cortes.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { CorteTransferenciaComponent } from './components/corte-transferencia/corte-transferencia.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'balance', component: BalanceComponent },
   { path: 'calculo-horas', component: CalculoHorasComponent },
   { path: 'cortes', component: CortesComponent },
+  { path: 'corte-transferencia', component: CorteTransferenciaComponent },
   { path: '**', redirectTo: '' }
 ];
 

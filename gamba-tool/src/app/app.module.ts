@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculoHorasComponent } from './components/calculo-horas/calculo-horas.component';
 import { CortesComponent } from './components/cortes/cortes.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { CorteTransferenciaComponent } from './components/corte-transferencia/corte-transferencia.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
     BalanceComponent,
     CalculoHorasComponent,
     CortesComponent,
-    InicioComponent
+    InicioComponent,
+    CorteTransferenciaComponent
   ],
   imports: [
     BrowserModule,
