@@ -37,7 +37,7 @@ export class CorteTransferenciaComponent implements OnInit {
         this.textoParaCopiar = this.textoParaCopiar.concat(`${this.formCorteTransf.get('seleccion')?.value}: ${this.formCorteTransf.get('numOp')?.value} - MONTO: $${aux},   `);
         this.formCorteTransf.reset();
       }
-    }else{
+    } else {
       alert("ingrese datos validos")
     }
   }

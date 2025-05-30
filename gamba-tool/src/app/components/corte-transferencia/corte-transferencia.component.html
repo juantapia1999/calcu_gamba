@@ -30,23 +30,24 @@
         </form>
     </div>
     <div class="col-12">
-        <h4>Texto para las Transferencias <span><button type="button" class="btn btn-sm btn-ligth float-right" (click)="toCopy()">Copiar</button></span></h4>
+        <h4>Texto para las Transferencias <span><button type="button" class="btn btn-sm btn-ligth float-right"
+                    (click)="toCopy()">Copiar</button></span></h4>
         <textarea class="form-control" rows="3" readonly [(ngModel)]="textoParaCopiar"></textarea>
         <br>
         <p>Cortes total ${{totalTransfer}}</p>
         <div class="table-responsive">
             <table class="table table-bordered text-center">
-            <thead class="thead-dark">
-                <tr>
-                    <th *ngFor="let x of cortes">{{x}}</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td *ngFor="let y of totalCortes.reverse()">{{y}}</td>
-                </tr>
-            </tbody>
-        </table>
+                <thead class="thead-dark">
+                    <tr>
+                        <th *ngFor="let x of cortes.reverse()">{{x}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td *ngFor="let y of totalCortes">{{y}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
