@@ -12,6 +12,7 @@ export class CorteTransferenciaComponent implements OnInit {
   totalTransfer: number = 0;
 
   readonly cortes: any = [20000, 10000, 5000, 2000, 1000, 500, 100, 50, 10];
+  cortesRev: any = [10, 50, 100, 500, 1000, 20000, 5000, 10000, 20000];
 
   totalCortes = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
