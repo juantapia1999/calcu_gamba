@@ -5,6 +5,7 @@ import { CalculoHorasComponent } from './components/calculo-horas/calculo-horas.
 import { CortesComponent } from './components/cortes/cortes.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { CorteTransferenciaComponent } from './components/corte-transferencia/corte-transferencia.component';
+import { PoderSimpleComponent } from './components/poder-simple/poder-simple.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'calculo-horas', component: CalculoHorasComponent },
   { path: 'cortes', component: CortesComponent },
   { path: 'corte-transferencia', component: CorteTransferenciaComponent },
+  { path: 'poder-simple', component: PoderSimpleComponent },
   { path: '**', redirectTo: '' }
 ];
 

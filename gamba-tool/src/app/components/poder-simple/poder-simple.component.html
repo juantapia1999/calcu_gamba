@@ -1,0 +1,84 @@
+<div class="doNotPrint">
+    <form>
+        <div class="form-group">
+            <label for="nombreTitular">Nombre y Apellido del Titular</label>
+            <input type="text" class="form-control" id="nombreTitular" [(ngModel)]="titularPoder.nombre"
+                [ngModelOptions]="{standalone: true}" aria-describedby="nombre y apellido">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="documentoTitular">Numero de Documento</label>
+                <input type="text" class="form-control" id="documentoTitular" [(ngModel)]="titularPoder.documento"
+                    [ngModelOptions]="{standalone: true}" aria-describedby="numero de documento">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="tipoDoc">Tipo de Documento</label>
+                <select id="tipoDoc" class="form-control" [(ngModel)]="titularPoder.tipoDoc"
+                    [ngModelOptions]="{standalone:true}">
+                    <option selected>Cedula de Identidad</option>
+                    <option>RUN</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-check">
+            <input class="form-check-input" type="checkbox" value="false" [(ngModel)]="titularPoder.nacimiento"
+                [ngModelOptions]="{standalone: true}" id="nacimiento1">
+            <label class="form-check-label" for="nacimiento1">
+                Certificado de Nacimiento
+            </label>
+        </div>
+        <div class="form-group form-check">
+            <input class="form-check-input" type="checkbox" value="false" [(ngModel)]="titularPoder.antecedente"
+                [ngModelOptions]="{standalone: true}" id="antecedentes">
+            <label class="form-check-label" for="antecedentes">
+                Antecedentes Penales
+            </label>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="hijos" [(ngModel)]="titularPoder.hijos"
+                [ngModelOptions]="{standalone: true}">
+            <label class="form-check-label" for="hijos">Tiene Hijo/Hija</label>
+        </div>
+        <div class="form-row" *ngIf="titularPoder.hijos">
+            <div class="form-group col-md-6">
+                <label for="nombreHijo">Nombre y Apellido del Hijo/Hija</label>
+                <input type="text" class="form-control" id="nombreHijo" [(ngModel)]="titularPoder.nombreHijo"
+                    [ngModelOptions]="{standalone: true}" aria-describedby="nombre y apellido">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="documentoHijo">Numero de Documento</label>
+                <input type="text" class="form-control" id="documentoHijo" [(ngModel)]="titularPoder.documentoHijo"
+                    [ngModelOptions]="{standalone: true}" aria-describedby="nombre y apellido">
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" (click)="onPrint()">Generar</button>
+            <button type="button" class="btn btn-warning" (click)="limpiar()">Limpiar Campos</button>
+        </div>
+    </form>
+
+</div>
+<div id="print-section">
+    <br>
+    <p style="text-align: center; margin-top: 20px; font-size: 25pt;"><b>PODER SIMPLE</b></p>
+    <br>
+    <p class="texto">Yo, <b>{{titularPoder.nombre | uppercase}}</b>, con {{titularPoder.tipoDoc}} N°
+        {{titularPoder.documento}} de
+        nacionalidad
+        boliviana, mayor de edad, confiero Poder Especial a doña <b>Katherine Andrea Zarate Diaz</b>,
+        con cedula de identidad No.<b>17279840-3</b>, domiciliada en Colbun 1930, Comuna de San Bernardo,
+        Región Metropolitana, Santiago, para que me represente con amplias facultades, ante las oficinas de
+        <b>RELACIONES EXTERIORES DE CHILE, Sección Legalizaciones</b>, para que procesa a la legalización del
+        certificado de <b>{{titularPoder.nacimiento || titularPoder.hijos?'Nacimiento':''}}
+            {{titularPoder.nacimiento&&titularPoder.antecedente?' y ':''}}
+            {{titularPoder.antecedente && !titularPoder.hijos?'Antecedentes Penales':''}}</b>
+        {{titularPoder.hijos?' de mi hijo/hija '+titularPoder.nombreHijo.toUpperCase()+' con CI
+        N°'+titularPoder.documentoHijo:''}}.
+    </p>
+    <p class="texto">Calama, {{fechaActual.toLocaleDateString()}}</p>
+    <br><br><br><br>
+    <hr style="border: 1px solid black; margin: 0% 20% 0% 20%">
+    <p class="texto" style="text-align: center; margin-bottom: 0%;"><b>{{titularPoder.nombre | uppercase}}</b></p>
+    <p class="texto" style="text-align: center;"><b>{{titularPoder.tipoDoc}} N°: {{titularPoder.documento}}</b></p>
+
+</div>

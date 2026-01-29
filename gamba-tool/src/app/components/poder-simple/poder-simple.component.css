@@ -1,0 +1,28 @@
+/* Styles for the screen view */
+.doNotPrint {
+  /* Default styles */
+}
+
+.texto{
+  font-size: 20pt;
+}
+
+/* Styles specifically for printing */
+@media print {
+  .doNotPrint {
+    display: none !important;
+  }
+  /* Add other print-specific styles here, e.g., margins, font sizes */
+  /* For example, hide everything except the print-section */
+  body *:not(#print-section) {
+    visibility: hidden;
+  }
+  #print-section {
+    visibility: visible;
+    position: absolute;
+    text-align: justify;
+    left: 40pt;
+    right: 40pt;
+    line-height: 2;
+  }
+}

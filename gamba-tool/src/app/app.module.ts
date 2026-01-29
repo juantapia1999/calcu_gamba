@@ -9,6 +9,7 @@ import { CalculoHorasComponent } from './components/calculo-horas/calculo-horas.
 import { CortesComponent } from './components/cortes/cortes.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { CorteTransferenciaComponent } from './components/corte-transferencia/corte-transferencia.component';
+import { PoderSimpleComponent } from './components/poder-simple/poder-simple.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CorteTransferenciaComponent } from './components/corte-transferencia/co
     CalculoHorasComponent,
     CortesComponent,
     InicioComponent,
-    CorteTransferenciaComponent
+    CorteTransferenciaComponent,
+    PoderSimpleComponent
   ],
   imports: [
     BrowserModule,
